@@ -1,0 +1,122 @@
+:root {
+  color-scheme: light;
+  --bg-1: #0a0f12;
+  --bg-2: #0f1a25;
+  --bg-3: #153145;
+  --accent: #f6c65b;
+  --accent-2: #63e6c2;
+  --text: #f8f4ed;
+  --soft: rgba(248, 244, 237, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #1c2a36 0%, #0a0f12 40%),
+    radial-gradient(circle at 80% 20%, #1f3d52 0%, #0a0f12 50%);
+  color: var(--text);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.stage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(21, 49, 69, 0.8), rgba(8, 12, 16, 0.95));
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: absolute;
+  top: 6vh;
+  left: 6vw;
+  z-index: 3;
+  max-width: 420px;
+  backdrop-filter: blur(6px);
+}
+
+.title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0.02em;
+}
+
+.byline {
+  margin-top: 6px;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(12px, 1.5vw, 15px);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(248, 244, 237, 0.6);
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+.tips {
+  font-size: 14px;
+  color: rgba(248, 244, 237, 0.55);
+}
+
+.tips-bottom {
+  position: absolute;
+  left: 6vw;
+  bottom: 4vh;
+  z-index: 3;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glow {
+  position: absolute;
+  width: min(60vw, 540px);
+  height: min(60vw, 540px);
+  right: -10%;
+  bottom: -15%;
+  background: radial-gradient(circle, rgba(99, 230, 194, 0.3), transparent 70%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  font-size: 12px;
+  color: rgba(248, 244, 237, 0.45);
+  z-index: 5;
+}
+
+@media (max-width: 720px) {
+  .hud {
+    left: 8vw;
+    right: 8vw;
+  }
+
+  .tips-bottom {
+    left: 8vw;
+    right: 8vw;
+  }
+
+  .footer {
+    left: 8vw;
+    right: 8vw;
+    text-align: left;
+  }
+}

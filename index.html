@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Handy Christmas Tree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <canvas id="scene"></canvas>
+      <section class="hud">
+        <div class="title">Merry Christmas</div>
+        <div class="byline">from Guster</div>
+      </section>
+      <div class="tips tips-bottom">
+        <div>Clench your fist = Draw into a Christmas tree</div>
+        <div>Open Palm or No Hand = Disperse into a Cloud</div>
+        <span>No camera? Try dragging with your mouse or touchscreen.</span>
+      </div>
+      <div class="glow"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
